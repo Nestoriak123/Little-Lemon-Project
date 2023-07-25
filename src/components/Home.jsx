@@ -1,5 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
+import restauranfood from '../icons_assets/restauranfood.jpg'
+import '../App.css';
 
 export default function Home() {
   return (
@@ -15,9 +17,10 @@ export default function Home() {
                         <h1>Little Lemon</h1>
                         <h3>Chicago</h3>
                         <p>Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+                        <button>Reserve a table</button>
                     </section>
                     <section>
-                        <img src='' alt=''/>
+                        <img src={restauranfood} width={400} height={400} alt=''/>
                     </section>
                 </article>
                 </div>
