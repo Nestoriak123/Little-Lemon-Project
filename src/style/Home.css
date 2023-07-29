@@ -1,0 +1,17 @@
+.reservation-section{
+    background-color: #495E57;
+}
+
+.reservation-section article{
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimals-section{
+    background-color: #495E57;
+}
+
+.testimals-section article{
+    display: flex;
+    padding: 2vw;
+}

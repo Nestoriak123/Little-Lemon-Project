@@ -1,42 +1,52 @@
-import React from 'react'
 import reserve_a_table from '../icons_assets/reserve a table.jpg'
+import { OccasionButton } from './Components';
+import { NumberOfGuests } from './Components';
+import { FormInput } from './Components';
+import { ReserveButton } from './Components';
 
 export default function ReserveTable() {
   return (
     <>
         <body>
             <main>
-                <img src={reserve_a_table} width={1111} height={578} alt='Reserve a table Image'/>
+                <img src={reserve_a_table} width={1111} height={578} alt='' />
             <article>
                 <section>
                     <h2>Reserve a Table</h2>
                     <form>
-                    <div>
-                        <label htmlFor="FirstName">First Name *</label>
-                        <input type="text" id="FirstName" />
+                    <div className="input-row-1">
+                        <FormInput type="text" id="FirstName" cssname="first-name-input" text="First Name"/>
 
-                        <label htmlFor='LastName'> Last Name *</label>
-                        <input type="text" id='LastName'/>
+                        <FormInput type="text" id="LastName" cssname="last-name-input" text="Last Name"/>
                     </div>
-                    <div>
-                        <label htmlFor="Email">Email *</label>
-                        <input type="email" id="Email" />
+                    <div className="input-row-2">
+                        <FormInput type="email" id="Email" cssname="email-input" text="Email"/>
 
-                        <label htmlFor='DofB'> Date of birthday *</label>
-                        <input type="date" id='DofB'/>
+                        <FormInput type="date" id="DofB" cssname="DofB-input" text="Date of Birthday"/>
                     </div>
-                    <div>
-                        <label htmlFor="DofR">Date of Reservation *</label>
-                        <input type="date" id="DofR" />
+                    <div className="input-row-3">
+                        <FormInput type="date" id="DofR" cssname="DofR-input" text="Date of Reservation"/>
 
-                        <label htmlFor='TofR'>Time of Reservation *</label>
-                        <input type="time" id='TofR'/>
+                        <FormInput type="time" id="TofR" cssname="TofR-input" text="Time of Reservation"/>
                     </div>
                     </form>
+                </section>
+            </article>
+            <article>
+                <section>
+                    <div>
+                        <NumberOfGuests/>
+                    </div>
+                    <div>
+                        <OccasionButton/>
+                    </div>
+                    <div>
+                        <ReserveButton/>
+                    </div>
                 </section>
             </article>
             </main>
         </body>
     </>
   )
-}
+};

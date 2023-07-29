@@ -1,7 +1,8 @@
 import React from 'react'
-import Footer from './Footer'
 import restauranfood from '../icons_assets/restauranfood.jpg'
 import '../App.css';
+import { SecondButton, MainButton } from './Components';
+import '../style/Home.css'
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
                         <h1>Little Lemon</h1>
                         <h3>Chicago</h3>
                         <p>Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                        <button>Reserve a table</button>
+                        <SecondButton text="Reserve a Table"/>
                     </section>
                     <section>
                         <img src={restauranfood} width={400} height={400} alt=''/>
@@ -28,7 +29,7 @@ export default function Home() {
                     <article>
                     <section>
                         <h2>Specials</h2>
-                        <button>Online Menu</button>
+                        <MainButton text="Online Menu"/>
                     </section>
                     <section className='dish-1'>
                         <img src='' alt=''/>
@@ -75,7 +76,9 @@ export default function Home() {
                 </article>
                 </div>
                 <div className='testimals-section'>
+                    <h2>Testimals</h2>
                     <article>
+                        
                         <div className='testimals-1'>
                             <section>
                                 <h4>10/10</h4>
@@ -123,7 +126,6 @@ export default function Home() {
                     </article>
                 </div>
             </main>
-            <Footer/>
         </body>
     </>
   )
