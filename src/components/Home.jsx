@@ -3,6 +3,7 @@ import restauranfood from '../icons_assets/restauranfood.jpg'
 import '../App.css';
 import { SecondButton, MainButton } from './Components';
 import '../style/Home.css'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -18,7 +19,9 @@ export default function Home() {
                         <h1>Little Lemon</h1>
                         <h3>Chicago</h3>
                         <p>Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                        <SecondButton text="Reserve a Table"/>
+                        <Link to="reserve-table">
+                            <SecondButton text="Reserve a Table"/>
+                        </Link>
                     </section>
                     <section>
                         <img src={restauranfood} width={400} height={400} alt=''/>

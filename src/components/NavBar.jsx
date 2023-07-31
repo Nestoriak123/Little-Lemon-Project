@@ -1,10 +1,13 @@
 import React from 'react'
 import Logo from '../icons_assets/Logo.svg'
 import Basket from "../icons_assets/basket .svg"
-import Home from '../components/Home'
-import ReserveTable from '../components/ReserveTable';
+import Home from './Home'
+import ReserveTable from './ReserveTable';
+import Menu from './Menu';
 import { Link,Route,Routes } from 'react-router-dom';
 import '../style/NavBar.css';
+
+import { MainCourses,Appetizers, Desserts } from './Menu';
 
 export default function NavBar() {
   return (
@@ -18,7 +21,7 @@ export default function NavBar() {
             About
           </li>
           <li>
-            Menu
+            <Link className='nav-text' to="menu/main-courses">Menu</Link>
           </li>
           <li>
             <Link className='nav-text' to="reserve-table">Reservations</Link>
@@ -33,7 +36,12 @@ export default function NavBar() {
       </nav>
     <Routes>
       <Route path="/" element={<Home/>}></Route>
+      <Route path="/menu/main-courses" element={<MainCourses/>}></Route>
       <Route path='/reserve-table' element={<ReserveTable/>}></Route>
+
+      <Route path="/menu/main-courses" element={<MainCourses/>}></Route>
+      <Route path="/menu/appetizers" element={<Appetizers/>}></Route>
+      <Route path="/menu/desserts" element={<Desserts/>}></Route>
     </Routes>
     </div>
   )

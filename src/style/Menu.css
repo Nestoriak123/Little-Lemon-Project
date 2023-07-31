@@ -1,0 +1,25 @@
+.dish-category-select{
+    display: flex;
+    justify-content: space-around;
+    margin: 1vw 0vw;
+}
+
+.main-courses-section{
+    display: flex;
+    justify-content: space-around;
+    background-color: #495E57;
+    margin: 1vw 0vw;
+}
+
+.main-courses-dish{
+    padding-bottom: 10vw;
+    background-color: #EDEFEE;
+    border-radius: 20px;
+    margin: 1.5vw 0vw;
+}
+
+.main-courses-dish img{
+    height: 35vh;
+    width: 20vw;
+    border-radius: 20px;
+}

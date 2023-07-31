@@ -51,7 +51,7 @@ export function DishCategoryButton(props) {
 export function AddToBasket(props) {
   return (
     <div className="add-to-basket">
-        <button type="submit">Add for {props.price}</button>
+        <button type="submit">Add for ${props.price}</button>
     </div>
   )
 }

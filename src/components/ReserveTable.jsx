@@ -9,7 +9,9 @@ export default function ReserveTable() {
     <>
         <body>
             <main>
-                <img src={reserve_a_table} width={1111} height={578} alt='' />
+                <div className='photo-section'>
+                    <img className='main-img' src={reserve_a_table} alt='' />
+                </div>
             <article>
                 <section>
                     <h2>Reserve a Table</h2>
