@@ -1,4 +1,6 @@
 import React from 'react'
+import '../style/Components.css'
+import { Link } from 'react-router-dom';
 
 export function OccasionButton() {
   return (
@@ -48,10 +50,10 @@ export function DishCategoryButton(props) {
   )
 }
 
-export function AddToBasket(props) {
+export function AddToBasket() {
   return (
     <div className="add-to-basket">
-        <button type="submit">Add for ${props.price}</button>
+        <button type="submit">To Basket </button>
     </div>
   )
 }
@@ -67,7 +69,7 @@ export function ReserveButton() {
 export function MainButton(props) {
   return (
     <div className="main-button">
-        <button type="submit">{props.text}</button>
+        <Link to={props.linkTo}><button type="submit">{props.text}</button></Link>
     </div>
   )
 }
@@ -84,7 +86,7 @@ export function FormInput(props) {
 export function SecondButton (props) {
   return (
     <div className="second-button">
-        <button type="submit">{props.text}</button>
+        <Link to={props.linkTo}><button type="submit">{props.text}</button></Link>
     </div>
   )
 }

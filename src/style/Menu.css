@@ -4,22 +4,55 @@
     margin: 1vw 0vw;
 }
 
-.main-courses-section{
-    display: flex;
-    justify-content: space-around;
+.dish-section{
     background-color: #495E57;
     margin: 1vw 0vw;
 }
 
-.main-courses-dish{
-    padding-bottom: 10vw;
+.category-name{
+    display: flex;
+    justify-content: center;
+}
+
+.category-name h2{
+    color: #F4CE14;
+    font-size: 2.5vw;
+}
+
+.dish{
+    display: flex;
+    justify-content: space-around;
+}
+
+.dishbox{
     background-color: #EDEFEE;
+    padding-bottom: 0.6vw;
     border-radius: 20px;
     margin: 1.5vw 0vw;
 }
 
-.main-courses-dish img{
+.dishbox img{
     height: 35vh;
     width: 20vw;
     border-radius: 20px;
+}
+
+.dishbox h3{
+    margin: 0.5vw 0vw 1vw 0vw;
+    text-align: center;
+    font-size: 2.1vw;
+    color: #333333;
+}
+
+.dishbox p{
+    margin: 0.5vw 0vw 0.9vw 0vw;
+    font-size: 1.7vw;
+    color: #EE9972;
+    font-weight: bold;
+    text-align: center;
+}
+
+.to-basket-button{
+    display: flex;
+    justify-content: center;
 }

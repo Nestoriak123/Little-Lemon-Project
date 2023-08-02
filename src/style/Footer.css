@@ -30,7 +30,11 @@ footer h4{
     margin-bottom: 0.75vw;
 }
 
-footer li{
+footer li,a{
     font-size: 1.2vw;
     color: #EDEFEE;
+}
+
+footer li:hover,a:hover{
+    color: #F4CE14;
 }

@@ -18,7 +18,7 @@ import cake from '../icons_assets/Menu/Desserts/Caramel Apple Cake.jpg'
 import pie from '../icons_assets/Menu/Desserts/Fudge pie.jpg'
 
 
-    const menu = [
+    export const menu = [
     {
         dish_img: salmon,
         dish_category: 'main courses',
@@ -111,15 +111,22 @@ export function MainCourses() {
             </article>
             <article>
                 <section>
-                    <div className='main-courses-section'>
+                    <div className='dish-section'>
+                        <div className='category-name'>
+                            <h2>Main Courses</h2>
+                        </div>
+                            <div className='dish'>
                             {mainCourse.map((mainCourse) =>
-                                <div className='main-courses-dish' key={mainCourse.dish_name}>
+                                <div className='dishbox' key={mainCourse.dish_name}>
                                     <img src={mainCourse.dish_img} alt=''/>
                                     <h3>{mainCourse.dish_name}</h3>
                                     <p>${mainCourse.dish_price}</p>
-                                    <AddToBasket price={mainCourse.dish_price}/>
+                                    <div className='to-basket-button'>
+                                        <AddToBasket price={mainCourse.dish_price}/>
+                                    </div>
                                 </div>
                             )}
+                            </div>
                     </div>
                 </section>
             </article>
@@ -128,7 +135,7 @@ export function MainCourses() {
   )
 }
 
-export function Appetizers() {
+export function Appetizers(){
   return (
     <>
         <main>
@@ -151,18 +158,23 @@ export function Appetizers() {
                 </section>
             </article>
             <article>
-                <section>
-                    <div className='main-courses-section'>
+                <div className='dish-section'>
+                        <div className='category-name'>
+                            <h2>Appetizers</h2>
+                        </div>
+                            <div className='dish'>
                             {appetizers.map((appetizers) =>
-                                <div className='main-courses-dish' key={appetizers.dish_name}>
+                                <div className='dishbox' key={appetizers.dish_name}>
                                     <img src={appetizers.dish_img} alt=''/>
                                     <h3>{appetizers.dish_name}</h3>
                                     <p>${appetizers.dish_price}</p>
-                                    <AddToBasket price={appetizers.dish_price}/>
+                                    <div className='to-basket-button'>
+                                        <AddToBasket price={appetizers.dish_price}/>
+                                    </div>
                                 </div>
                             )}
+                            </div>
                     </div>
-                </section>
             </article>
         </main>
     </>
@@ -193,15 +205,22 @@ export function Desserts() {
             </article>
             <article>
                 <section>
-                    <div className='main-courses-section'>
+                <div className='dish-section'>
+                        <div className='category-name'>
+                            <h2>Desserts</h2>
+                        </div>
+                            <div className='dish'>
                             {desserts.map((desserts) =>
-                                <div className='main-courses-dish' key={desserts.dish_name}>
+                                <div className='dishbox' key={desserts.dish_name}>
                                     <img src={desserts.dish_img} alt=''/>
                                     <h3>{desserts.dish_name}</h3>
                                     <p>${desserts.dish_price}</p>
-                                    <AddToBasket price={desserts.dish_price}/>
+                                    <div className='to-basket-button'>
+                                        <AddToBasket price={desserts.dish_price}/>
+                                    </div>
                                 </div>
                             )}
+                            </div>
                     </div>
                 </section>
             </article>

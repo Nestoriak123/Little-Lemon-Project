@@ -4,7 +4,41 @@
 
 .reservation-section article{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0vw 5vw;
+}
+
+.reservation-section-img{
+    display: flex;
+    align-items: center;
+}
+
+.reservation-section h1{
+    color: #F4CE14;
+    font-size: 5vw;
+}
+
+.reservation-section h3{
+    color: #EDEFEE;
+    font-size: 3vw;
+    margin-bottom: 1.3vw;
+}
+
+.reservation-section p{
+    color: #EDEFEE;
+    font-size: 2vw;
+    margin-bottom: 3vw;
+}
+
+.home-reserve-button{
+    margin-bottom: 1.5vw;
+}
+
+.reservation-section img{
+    width: 25vw;
+    height: 55vh;
+    border-radius: 15px;
+    margin: 0.5vw 0vw;
 }
 
 .testimals-section{

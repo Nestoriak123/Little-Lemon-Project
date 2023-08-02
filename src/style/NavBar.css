@@ -9,25 +9,23 @@ nav ul{
     padding: 0.5vw 1.5vw;
 }
 
-
-nav li{
-    font-size: 1.7vw;
-    color: #333;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.nav-logo{
+    width: 20vw;
+    height: 9vh;
 }
 
 .nav-text{
     color: #333;
     font-family: Inter;
     font-size: 1.7vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+
 }
 
 .nav-text:hover{
     color: #F4CE14;
+}
+
+.nav-basket{
+    width: 4vw;
+    height: 9vh;
 }

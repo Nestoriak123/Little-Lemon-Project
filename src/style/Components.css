@@ -1,0 +1,67 @@
+.second-button button{
+    height: 9vh;
+    width: 15vw;
+    font-size: 1.7vw;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.351);
+    color: #333;
+    background-color: #f4ce14;
+}
+
+.second-button button:hover{
+    color: #f4ce14;
+    background-color: #EDEFEE;
+    cursor: pointer;
+}
+
+.main-button button{
+    height: 9vh;
+    width: 15vw;
+    font-size: 1.7vw;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.351);
+    color: #333;
+    background-color: #f4ce14;
+}
+
+.main-button button:hover{
+    color:#f4ce14;
+    background-color: #495E57;
+    cursor: pointer;
+}
+
+.dish-category-button button{
+    height: 7vh;
+    width: 13vw;
+    font-size: 1.6vw;
+    border-radius: 20px;
+    border: 0px;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.351);
+    color: #495E57;
+    background-color: #EDEFEE;
+}
+
+.dish-category-button button:hover{
+    color:#EDEFEE;
+    background-color: #495E57;
+    cursor: pointer;
+}
+
+.add-to-basket button{
+    height: 9vh;
+    width: 19vw;
+    font-size: 2.1vw;
+    border-radius: 25px;
+    border: 0px;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.351);
+    color: #495E57;
+    background-color: #F4CE14;
+}
+
+.add-to-basket button:hover{
+    color:#EDEFEE;
+    background-color: #495E57;
+    cursor: pointer;
+}

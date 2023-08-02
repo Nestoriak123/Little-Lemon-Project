@@ -1,6 +1,7 @@
 import React from 'react'
 import footerImg from '../icons_assets/footer_logo.png'
 import '../style/Footer.css'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -11,10 +12,10 @@ export default function Footer() {
             <div className='doormat'>
             <h4>Doormat Navigation</h4>
                 <ul>
-                    <li>Home</li>
+                    <Link to="/"><li>Home</li></Link>
                     <li>About</li>
-                    <li>Menu</li>
-                    <li>Reservation</li>
+                    <Link to="menu/main-courses"><li>Menu</li></Link>
+                    <Link to="reserve-table"><li>Reservation</li></Link>
                     <li>Order Online</li>
                 </ul>
             </div>
@@ -29,9 +30,9 @@ export default function Footer() {
             <div className='social-media-links'>
             <h4>Social Media Links</h4>
                 <ul>
-                    <li>Facebook</li>
-                    <li>Twiter</li>
-                    <li>Instagram</li>
+                    <li><a target='_blank' rel='noreferrer' href='https://www.facebook.com/profile.php?id=100071207536307'>Facebook</a></li>
+                    <li><a target='_blank' rel='noreferrer' href='https://twitter.com/Lil_Lemon_LoL'>Twiter</a></li>
+                    <li><a target='_blank' rel='noreferrer' href='https://www.instagram.com/littlelemon81/'>Instagram</a></li>
                 </ul>
             </div>
             </div>
