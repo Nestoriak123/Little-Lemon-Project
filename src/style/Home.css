@@ -1,3 +1,4 @@
+    /*RESERVATION-section*/
 .reservation-section{
     background-color: #495E57;
 }
@@ -41,11 +42,167 @@
     margin: 0.5vw 0vw;
 }
 
-.testimals-section{
-    background-color: #495E57;
+    /*MENU-section*/
+.specials{
+    margin: 2vw 0vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.testimals-section article{
+.specials h2{
+    font-size: 3vw;
+}
+
+/*dish-section*/
+.home-dish-section{
     display: flex;
-    padding: 2vw;
+    justify-content: center;
+}
+
+/*dish-box*/
+.home-dish{
+    background-color:#EDEFEE;
+    margin: 1.5vw 3vw;
+    width: 20vw;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.home-dish img{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 20px;
+}
+
+.name_price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5vw 1vw;
+}
+
+.name_price h4{
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.name_price p{
+    color: #EE9972;
+    font-size: 1.5vw;
+}
+
+.home-dish-description{
+    margin: 0.5vw 1vw;
+    font-size: 1.1vw;
+}
+
+.dish-delivery{
+    margin: 1vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dish-delivery p{
+    font-size: 1.2vw;
+}
+
+.dish-delivery img{
+    width: 3vw;
+    height: 3vh;
+}
+
+    /*TESTIMALS-section*/
+.testimals-section{
+    background-color: #495E57;
+    padding-bottom: 1.5vw;
+}
+
+.testimals-section h2{
+    font-size: 3.5vw;
+    text-align: center;
+    color: #F4CE14;
+    padding: 1vw 0vw;
+}
+
+.testimals{
+    display: flex;
+}
+
+.testimalsbox{
+    background-color: #EDEFEE;
+    border-radius: 5px;
+    margin: 1vw;
+    padding: 0.5vw 1.5vw 1.5vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.testimalsbox h4{
+    color:#EE9972;
+    font-size: 2vw;
+    font-weight: 500;
+    margin-bottom: 0.7vw;
+}
+
+.name_img{
+    display: flex;
+    align-items: center;
+}
+
+.testimalsbox img{
+    width: 6.6vw;
+    height: 14vh;
+    margin-right: 2vw;
+}
+
+.name_img p{
+    font-size: 1.7vw;
+}
+
+.testimals-description{
+    margin-top: 0.5vw;
+    font-size: 1.2vw;
+}
+
+    /*About-section*/
+.about-section section{
+    display: flex;
+    padding: 3vw;
+}
+
+.about-text h1{
+    font-size: 4vw;
+    color: #F4CE14;
+}
+
+.about-text h3{
+    font-size: 2.7vw;
+    color: #333;
+    margin: 0.5vw 0vw;
+}
+
+.about-text p{
+    margin-right: 15vw;
+    font-size: 2vw;
+}
+
+.about-photo{
+    display: flex;
+}
+
+.about-photo img{
+    width: 15vw;
+    height: 40vh;
+    border-radius: 10px;
+}
+
+.about-photo-1{
+    z-index: 2;
+    margin-top: 5vw;
+}
+
+.about-photo-2{
+    margin-left: -5vw;
+    z-index: 1;
 }

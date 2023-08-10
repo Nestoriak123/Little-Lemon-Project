@@ -8,6 +8,8 @@ import '../style/NavBar.css';
 
 import { MainCourses,Appetizers, Desserts } from './Menu';
 
+import {Salmon} from './Dish'
+
 export default function NavBar() {
   return (
     <div>
@@ -42,7 +44,7 @@ export default function NavBar() {
       <Route path="/menu/appetizers" element={<Appetizers/>}></Route>
       <Route path="/menu/desserts" element={<Desserts/>}></Route>
 
-      <Route path='/menu/main-courses/cedar-plank-salmon'></Route>
+      <Route path='/menu/main-courses/cedar-plank-salmon' element={<Salmon/>}></Route>
     </Routes>
     </div>
   )
