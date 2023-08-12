@@ -32,8 +32,9 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_category: 'main courses',
         dish_rows: 1,
         dish_name: 'Cedar-Plank Salmon',
-        dish_description:'Cedar',
-        dish_price: 14.99
+        dish_description:'Cedar-plank salmon is a fish delicacy that involves cooking salmon on cedar planks, a unique method of cooking which is believed to have been originally practiced by the Native Americans who mostly used Western red cedar',
+        dish_price: 14.99,
+        dish_link: "/menu/main-courses/cedar-plank-salmon"
     },
     {
         dish_img:gado,
@@ -41,7 +42,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 1,
         dish_name: 'Gado Gado',
         dish_description:'Gado Gado ...',
-        dish_price: 11.99
+        dish_price: 11.99,
+        dish_link: ""
     },
     {
         dish_img:aioli,
@@ -49,7 +51,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 1,
         dish_name: 'Grand Aioli',
         dish_description:'Grand Aioli ...',
-        dish_price: 19.99
+        dish_price: 19.99,
+        dish_link: ""
     },
     {
         dish_img:pizza,
@@ -57,7 +60,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Supreme Pizza',
         dish_description:'Supreme Pizza ...',
-        dish_price: 9.99
+        dish_price: 9.99,
+        dish_link: ""
     },
     {
         dish_img:lasagna,
@@ -65,7 +69,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Ravioli Lasagna',
         dish_description:'Ravioli Lasagna ...',
-        dish_price: 4.99
+        dish_price: 4.99,
+        dish_link: ""
     },
     {
         dish_img:chicken,
@@ -73,7 +78,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Lemon Chicken',
         dish_description:'Lemon Chicken ...',
-        dish_price: 10.99
+        dish_price: 10.99,
+        dish_link: ""
     },
     {
         dish_img:bruschetta,
@@ -81,7 +87,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 1,
         dish_name: 'Bruschetta',
         dish_description:'Bruschetta ...',
-        dish_price: 9.99
+        dish_price: 9.99,
+        dish_link: ""
     },
     {
         dish_img:shrimp,
@@ -89,7 +96,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 1,
         dish_name: 'Party Shrimp',
         dish_description:'Party Shrimp ...',
-        dish_price: 12.99
+        dish_price: 12.99,
+        dish_link: ""
     },
     {
         dish_img:cheese_fries,
@@ -97,7 +105,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 1,
         dish_name: 'Cheese Fries',
         dish_description:'Cheese Fries ...',
-        dish_price: 7.99
+        dish_price: 7.99,
+        dish_link: ""
     },
     {
         dish_img:meatballs,
@@ -105,7 +114,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Glazed Meatballs',
         dish_description:'Orange-Glazed Meatballs ...',
-        dish_price: 16.99
+        dish_price: 16.99,
+        dish_link: ""
     },
     {
         dish_img: pepperoni,
@@ -113,7 +123,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Pepperoni Pizza Loaf',
         dish_description:'Pepperoni Pizza Loaf ...',
-        dish_price: 12.99
+        dish_price: 12.99,
+        dish_link: ""
     },
     {
         dish_img:pretzels,
@@ -121,7 +132,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Soft Beer Pretzels',
         dish_description:'Soft Beer Pretzels ...',
-        dish_price: 4.99
+        dish_price: 4.99,
+        dish_link: ""
     },
     {
         dish_img:lemon_desert,
@@ -129,7 +141,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 1,
         dish_name: 'Lemon Desert',
         dish_description:'Lemon Desert ...',
-        dish_price: 4.99
+        dish_price: 4.99,
+        dish_link: ""
     },
     {
         dish_img:cake,
@@ -137,7 +150,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 1,
         dish_name: 'Caramel Apple Cake',
         dish_description:'Caramel Apple Cake ...',
-        dish_price: 23.99
+        dish_price: 23.99,
+        dish_link: ""
     },
     {
         dish_img:pie,
@@ -145,7 +159,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 1,
         dish_name: 'Fudge Pie',
         dish_description:'Fudge Pie ...',
-        dish_price: 12.99
+        dish_price: 12.99,
+        dish_link: ""
     },
     {
         dish_img:cobbler,
@@ -153,7 +168,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Chocolate Cobbler',
         dish_description:'Chocolate Cobbler ...',
-        dish_price: 5.99
+        dish_price: 5.99,
+        dish_link: ""
     },
     {
         dish_img:mississippi,
@@ -161,7 +177,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Mississippi Cake',
         dish_description:'Mississippi Cake ...',
-        dish_price: 4.99
+        dish_price: 4.99,
+        dish_link: ""
     },
     {
         dish_img:chess_pie,
@@ -169,7 +186,8 @@ import chess_pie from '../icons_assets/Menu/Desserts/classic-chess-pie.webp'
         dish_rows: 2,
         dish_name: 'Chess Pie',
         dish_description:'Chess Pie ...',
-        dish_price: 4.99
+        dish_price: 4.99,
+        dish_link: ""
     },
 ];
 
@@ -215,7 +233,7 @@ export function MainCourses() {
                                     <h3>{mainCourse.dish_name}</h3>
                                     <p>${mainCourse.dish_price}</p>
                                     <div className='to-basket-button'>
-                                        <AddToBasket price={mainCourse.dish_price}/>
+                                        <AddToBasket LinkTo={mainCourse.dish_link}/>
                                     </div>
                                 </div>
                             )}
@@ -227,7 +245,7 @@ export function MainCourses() {
                                     <h3>{mainCourse.dish_name}</h3>
                                     <p>${mainCourse.dish_price}</p>
                                     <div className='to-basket-button'>
-                                        <AddToBasket price={mainCourse.dish_price}/>
+                                        <AddToBasket LinkTo={mainCourse.dish_link}/>
                                     </div>
                                 </div>
                             )}
@@ -274,7 +292,7 @@ export function Appetizers(){
                                     <h3>{appetizers.dish_name}</h3>
                                     <p>${appetizers.dish_price}</p>
                                     <div className='to-basket-button'>
-                                        <AddToBasket price={appetizers.dish_price}/>
+                                        <AddToBasket LinkTo={appetizers.dish_link}/>
                                     </div>
                                 </div>
                             )}
@@ -286,7 +304,7 @@ export function Appetizers(){
                                     <h3>{appetizers.dish_name}</h3>
                                     <p>${appetizers.dish_price}</p>
                                     <div className='to-basket-button'>
-                                        <AddToBasket price={appetizers.dish_price}/>
+                                        <AddToBasket LinkTo={appetizers.dish_link}/>
                                     </div>
                                 </div>
                             )}
@@ -333,7 +351,7 @@ export function Desserts() {
                                     <h3>{desserts.dish_name}</h3>
                                     <p>${desserts.dish_price}</p>
                                     <div className='to-basket-button'>
-                                        <AddToBasket price={desserts.dish_price}/>
+                                        <AddToBasket LinkTo={desserts.dish_link}/>
                                     </div>
                                 </div>
                             )}
@@ -345,7 +363,7 @@ export function Desserts() {
                                     <h3>{desserts.dish_name}</h3>
                                     <p>${desserts.dish_price}</p>
                                     <div className='to-basket-button'>
-                                        <AddToBasket price={desserts.dish_price}/>
+                                        <AddToBasket LinkTo={desserts.dish_link}/>
                                     </div>
                                 </div>
                             )}

@@ -1,0 +1,77 @@
+.dish-box{
+    display: flex;
+    align-items: center;
+    background-color: #495E57;
+    padding-right: 2vw;
+}
+
+.dish-photo{
+    margin: 0vw 0vw;
+    padding: 1vw 0vw;
+    display: flex;
+    align-items: center;
+}
+
+.dish-img{
+    max-width: 50vw;
+    width: 50vw;
+    height: 70vh;
+    max-height:70vh;
+    align-items: center;
+    margin: 0vw 7vw;
+    border-radius: 1.5vw;
+    border: 0.4vw white solid;
+}
+
+.dish-name_price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish-name_price h3,h4{
+    font-size: 3vw;
+    margin: 1vw;
+    color: #F4CE14;
+}
+
+.dish-info p{
+    font-size: 1.5vw;
+    margin: 0.5vw 1vw;
+    color: #EDEFEE;
+}
+
+.customize-section{
+    background-color: #EDEFEE;
+    padding: 2vw;
+}
+
+.customize-section h3{
+    color: #F4CE14;
+    font-weight: 500;
+    font-size: 2.5vw;
+    margin-left: 2vw;
+}
+
+.customs{
+    margin: 0.5vw 2vw;
+}
+
+.custom{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5vw;
+}
+
+.custom-price{
+    display: flex;
+}
+
+.custom-price p{
+    margin: 0vw 0.5vw;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+}

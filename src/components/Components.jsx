@@ -15,7 +15,7 @@ export function OccasionButton() {
   )
 }
 
-export function NumberOfGuests() {
+export function Number(props) {
     const [number, setNumber] = React.useState(0);
 
     const Minus = () =>{
@@ -33,8 +33,8 @@ export function NumberOfGuests() {
         };
     }
   return (
-    <div className='number-of-guest'>
-        <h2>Number of Guests *</h2>
+    <div className='number-component'>
+        <h2>{props.name}</h2>
         <button onClick={Minus}>-</button>
             {number}
         <button onClick={Plus}>+</button>
@@ -53,7 +53,7 @@ export function DishCategoryButton(props) {
 export function AddToBasket(props) {
   return (
     <div className="add-to-basket">
-        <Link to={props.LinkTo}><button type="submit">To Basket {props.price}</button></Link>
+        <Link to={props.LinkTo}><button type="submit">Order</button></Link>
     </div>
   )
 }
@@ -90,4 +90,7 @@ export function SecondButton (props) {
     </div>
   )
 }
+
+
+
 

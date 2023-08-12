@@ -18,9 +18,6 @@ import about_photo_2 from '../icons_assets/about-photo-2.png'
 export default function Home() {
   return (
     <>
-        <head>
-            <title></title>
-        </head>
         <body>
             <main>
                 <div className='reservation-section'>

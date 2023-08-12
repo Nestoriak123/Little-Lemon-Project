@@ -1,6 +1,6 @@
 import reserve_a_table from '../icons_assets/reserve a table.jpg'
 import { OccasionButton } from './Components';
-import { NumberOfGuests } from './Components';
+import { Number } from './Components';
 import { FormInput } from './Components';
 import { ReserveButton } from './Components';
 
@@ -37,7 +37,7 @@ export default function ReserveTable() {
             <article>
                 <section>
                     <div>
-                        <NumberOfGuests/>
+                        <Number name="Number of Guests *"/>
                     </div>
                     <div>
                         <OccasionButton/>
