@@ -75,3 +75,52 @@
     justify-content: center;
     margin-top: 2vw;
 }
+
+.add-button{
+    margin: 1vw;
+    display: flex;
+    justify-content: center;
+}
+
+.alco-type{
+    display: flex;
+    justify-content: space-between;
+}
+
+.customs-checked-box{
+    margin: 0.3vw 2vw;
+    width: 25vw;
+}
+
+.customs-checked{
+    display: flex;
+    justify-content: space-between;
+}
+
+.customs-checked-price{
+    display: flex;
+}
+
+.drink-size{
+    margin: 1vw;
+}
+
+.drink-size-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.drink-size-price{
+    display: flex;
+}
+
+.text-area{
+    display: flex;
+    justify-content: center;
+}
+
+textarea{
+    resize: none;
+    border: none;
+    margin: 0.5vw 4vw;
+}
