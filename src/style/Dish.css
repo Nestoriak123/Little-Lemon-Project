@@ -1,3 +1,54 @@
+/*Input style*/
+.custom-checkbox {
+    position: relative;
+    cursor: pointer;
+    font-size: 2vw;
+    margin-left: 0.5vw;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3.4vh;
+    width: 1.5vw;
+    background-color: #EDEFEE;
+    border: solid 0.1vw #495E57;
+    border-radius: 4px;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #495E57;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 0.45vw;
+    top: 0.15vw;
+    width: 0.4vw;
+    height: 0.9vw;
+    border: solid #F4CE14;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+/*Dish*/
 .dish-box{
     display: flex;
     align-items: center;
@@ -40,6 +91,8 @@
     color: #EDEFEE;
 }
 
+/*CUSTOMS*/
+
 .customize-section{
     background-color: #EDEFEE;
     padding: 2vw;
@@ -62,29 +115,43 @@
     margin: 0.5vw;
 }
 
+.custom h5{
+    font-size: 1.85vw;
+    color: #333;
+    font-weight: 500;
+}
+
 .custom-price{
     display: flex;
+    align-items: center;
+    margin-right: 1.2vw;
+    margin-bottom: 0.9vw;
 }
 
-.custom-price p{
-    margin: 0vw 0.5vw;
+.drinks-checked{
+    margin: 0.5vw 1.5vw;
 }
 
-.number{
-    display: flex;
-    justify-content: center;
-    margin-top: 2vw;
-}
-
-.add-button{
-    margin: 1vw;
-    display: flex;
-    justify-content: center;
+.alco-type-box{
+    width: 35vw;
+    margin: 1vw 0vw;
 }
 
 .alco-type{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.5vw;
+}
+
+.alco-type h5{
+    font-size: 1.65vw;
+    color: #333;
+    font-weight: 500;
+}
+
+.alco-type label{
+    margin-right: 1.7vw;
+    margin-top: 0.3vw;
 }
 
 .customs-checked-box{
@@ -95,10 +162,19 @@
 .customs-checked{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.4vw;
+}
+
+.customs-checked h6{
+    font-size: 1.45vw;
+    color: #495E57;
+    font-weight: 500;
 }
 
 .customs-checked-price{
     display: flex;
+    margin-top: 0.25vw;
+    margin-right: 1.7vw;
 }
 
 .drink-size{
@@ -108,10 +184,33 @@
 .drink-size-box{
     display: flex;
     justify-content: space-between;
+    margin: 0.4vw 0vw;
+}
+
+.drink-size-box h6{
+    font-size: 1.25vw;
+    color: #495E57;
+    font-weight: 500;
+}
+
+b{
+    font-size: 1.25vw;
+    font-weight: 500;
+    color: #495E57;
+    margin-right: 0.1vw;
 }
 
 .drink-size-price{
     display: flex;
+    margin-right: 1.7vw;
+}
+
+.drink-size-price p{
+    display: flex;
+    align-items: center;
+    color: #EE9972;
+    font-size: 1.25vw;
+    font-weight: 500;
 }
 
 .text-area{
@@ -123,4 +222,42 @@ textarea{
     resize: none;
     border: none;
     margin: 0.5vw 4vw;
+}
+
+
+/*Amount*/
+.number{
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.number h2{
+    font-size: 2.2vw;
+    color: #F4CE14;
+}
+
+.number-component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-component p{
+    width: 1vw;
+    max-width: 1vw;
+}
+
+.number-component button{
+    width: 2vw;
+    height: auto;
+    padding: 0.1vw 0vw;
+    margin: 0.3vw 0.7vw;
+}
+
+
+/*Add button*/
+.add-button{
+    margin: 1vw;
+    display: flex;
+    justify-content: center;
 }

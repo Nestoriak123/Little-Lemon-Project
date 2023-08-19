@@ -56,7 +56,7 @@ export default function Home() {
                             <p>
                             </p>
                             <span>
-                                <Link className='dish-delivery'>
+                                <Link to='/menu/main-courses/greek_salad' className='dish-delivery'>
                                     <p>Order a delivery</p>
                                     <img src={delivery_icon} alt=''/>
                                 </Link>
@@ -77,7 +77,7 @@ export default function Home() {
 
                                 </p>
                                 <span>
-                                    <Link className='dish-delivery'>
+                                    <Link to="/menu/main-courses/bruschetta" className='dish-delivery'>
                                         <p>Order a delivery</p>
                                         <img src={delivery_icon} alt=''/>
                                     </Link>
@@ -98,7 +98,7 @@ export default function Home() {
 
                                 </p>
                                 <span>
-                                    <Link className='dish-delivery'>
+                                    <Link to="/menu/main-courses/lemon-dessert" className='dish-delivery'>
                                         <p>Order a delivery</p>
                                         <img src={delivery_icon} alt=''/>
                                     </Link>

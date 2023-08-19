@@ -8,7 +8,10 @@ import '../style/NavBar.css';
 
 import { MainCourses,Appetizers, Desserts } from './Menu';
 
-import {Salmon} from './Dish'
+import {Salmon,Gado,Aioli,SupremePizza,Lasagna,LemonChicken,
+Bruschetta,PartyShrimp,CheeseFries,GlazedMeatballs,PepperoniPizza,SoftBeerPretzels,
+LemonDesert,CaramelAppleCake,FudgePie,ChocolateCobbler,MississippiCake,ChessPie,
+GreekSalad} from './Dish'
 
 export default function NavBar() {
   return (
@@ -22,13 +25,13 @@ export default function NavBar() {
             <Link className='nav-text' to="">About</Link>
           </li>
           <li>
-            <Link className='nav-text' to="menu/main-courses">Menu</Link>
+            <Link className='nav-text' to="/menu/main-courses">Menu</Link>
           </li>
           <li>
-            <Link className='nav-text' to="reserve-table">Reservations</Link>
+            <Link className='nav-text' to="/reserve-table">Reservations</Link>
           </li>
           <li>
-            <Link className='nav-text' to="">Order Online</Link>
+            <Link className='nav-text' to="/menu/main-courses">Order Online</Link>
           </li>
           <li>
             <img className='nav-basket' src={Basket} alt='basket'/>
@@ -37,7 +40,6 @@ export default function NavBar() {
       </nav>
     <Routes>
       <Route path="/" element={<Home/>}></Route>
-      <Route path="/menu/main-courses" element={<MainCourses/>}></Route>
       <Route path='/reserve-table' element={<ReserveTable/>}></Route>
 
       <Route path="/menu/main-courses" element={<MainCourses/>}></Route>
@@ -45,6 +47,28 @@ export default function NavBar() {
       <Route path="/menu/desserts" element={<Desserts/>}></Route>
 
       <Route path='/menu/main-courses/cedar-plank-salmon' element={<Salmon/>}></Route>
+      <Route path='/menu/main-courses/gado-gado' element={<Gado/>}></Route>
+      <Route path='/menu/main-courses/aioli' element={<Aioli/>}></Route>
+      <Route path='/menu/main-courses/supreme-pizza' element={<SupremePizza/>}></Route>
+      <Route path='/menu/main-courses/ravioli-lasagna' element={<Lasagna/>}></Route>
+      <Route path='/menu/main-courses/lemon-chicken' element={<LemonChicken/>}></Route>
+
+      <Route path='/menu/main-courses/bruschetta' element={<Bruschetta/>}></Route>
+      <Route path='/menu/main-courses/party-shrimp' element={<PartyShrimp/>}></Route>
+      <Route path='/menu/main-courses/cheese-fries' element={<CheeseFries/>}></Route>
+      <Route path='/menu/main-courses/glazed-meatballs' element={<GlazedMeatballs/>}></Route>
+      <Route path='/menu/main-courses/pepperoni-pizza-loaf' element={<PepperoniPizza/>}></Route>
+      <Route path='/menu/main-courses/soft-beer-pretzels' element={<SoftBeerPretzels/>}></Route>
+
+      <Route path='/menu/main-courses/lemon-dessert' element={<LemonDesert/>}></Route>
+      <Route path='/menu/main-courses/caramel-apple-cake' element={<CaramelAppleCake/>}></Route>
+      <Route path='/menu/main-courses/fudge-pie' element={<FudgePie/>}></Route>
+      <Route path='/menu/main-courses/chocolate-cobbler' element={<ChocolateCobbler/>}></Route>
+      <Route path='/menu/main-courses/mississippi-cake' element={<MississippiCake/>}></Route>
+      <Route path='/menu/main-courses/chess-pie' element={<ChessPie/>}></Route>
+
+      <Route path='/menu/main-courses/greek_salad' element={<GreekSalad/>}></Route>
+
     </Routes>
     </div>
   )
