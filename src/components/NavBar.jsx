@@ -22,7 +22,7 @@ export default function NavBar() {
             <Link to="/"><img className='nav-logo' src={Logo} alt='Logo'/></Link>
           </li>
           <li>
-            <Link className='nav-text' to="">About</Link>
+            <a href='#about' className='nav-text'>About</a>
           </li>
           <li>
             <Link className='nav-text' to="/menu/main-courses">Menu</Link>

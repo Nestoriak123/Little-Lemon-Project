@@ -13,10 +13,10 @@ export default function Footer() {
             <h4>Doormat Navigation</h4>
                 <ul>
                     <Link to="/"><li>Home</li></Link>
-                    <li>About</li>
+                    <a href='#about'><li>About</li></a>
                     <Link to="menu/main-courses"><li>Menu</li></Link>
                     <Link to="reserve-table"><li>Reservation</li></Link>
-                    <li>Order Online</li>
+                    <Link to="menu/main-courses"><li>Order Online</li></Link>
                 </ul>
             </div>
             <div className='contact'>

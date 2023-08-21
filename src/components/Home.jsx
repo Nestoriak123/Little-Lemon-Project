@@ -156,7 +156,7 @@ export default function Home() {
                 <div className='about-section'>
                     <article>
                         <section>
-                            <div className='about-text'>
+                            <div id='about' className='about-text'>
                                 <h1>Little Lemon</h1>
                                 <h3>Chicago</h3>
                                 <p>Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.

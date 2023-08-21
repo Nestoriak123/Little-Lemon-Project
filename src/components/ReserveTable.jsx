@@ -3,6 +3,7 @@ import { OccasionButton } from './Components';
 import { Number } from './Components';
 import { FormInput } from './Components';
 import { ReserveButton } from './Components';
+import "../style/ReserveTable.css"
 
 export default function ReserveTable() {
   return (
@@ -17,19 +18,19 @@ export default function ReserveTable() {
                     <h2>Reserve a Table</h2>
                     <form>
                     <div className="input-row-1">
-                        <FormInput type="text" id="FirstName" cssname="first-name-input" text="First Name"/>
+                        <FormInput type="text" id="FirstName" text="First Name"/>
 
-                        <FormInput type="text" id="LastName" cssname="last-name-input" text="Last Name"/>
+                        <FormInput type="text" id="LastName" text="Last Name"/>
                     </div>
                     <div className="input-row-2">
-                        <FormInput type="email" id="Email" cssname="email-input" text="Email"/>
+                        <FormInput type="email" id="Email" text="Email"/>
 
-                        <FormInput type="date" id="DofB" cssname="DofB-input" text="Date of Birthday"/>
+                        <FormInput type="date" id="DofB" text="Date of Birthday"/>
                     </div>
                     <div className="input-row-3">
-                        <FormInput type="date" id="DofR" cssname="DofR-input" text="Date of Reservation"/>
+                        <FormInput type="date" id="DofR" text="Date of Reservation"/>
 
-                        <FormInput type="time" id="TofR" cssname="TofR-input" text="Time of Reservation"/>
+                        <FormInput type="time" id="TofR" text="Time of Reservation"/>
                     </div>
                     </form>
                 </section>
