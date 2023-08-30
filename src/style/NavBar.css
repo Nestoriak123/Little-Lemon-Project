@@ -1,5 +1,8 @@
 nav{
-    max-width: 100vw;
+    width: 100vw;
+    position: fixed;
+    background-color: #ffffffc0;
+    z-index: 3;
 }
 
 nav ul{

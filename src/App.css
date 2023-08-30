@@ -8,6 +8,10 @@
     color: black;
 }
 
+.body-page{
+    padding-top: 12vh;
+}
+
 .photo-section{
     background-color: #495E57;
     margin: 0vw 0vw;

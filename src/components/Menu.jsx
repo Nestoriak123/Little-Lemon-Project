@@ -211,7 +211,7 @@ import greek_salad from '../icons_assets/greek salad.jpg'
 
 export function MainCourses() {
   return (
-    <>
+    <div  className='body-page'>
          <main>
             <div className='photo-section'>
                 <img className='main-img' src={menu_img} alt=''/>
@@ -265,7 +265,7 @@ export function MainCourses() {
                 </section>
             </article>
         </main>
-    </>
+    </div>
   )
 }
 

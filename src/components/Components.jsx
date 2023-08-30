@@ -5,39 +5,11 @@ import { Link } from 'react-router-dom';
 export function OccasionButton() {
   return (
     <div className="occasion-button">
-        <label htmlFor="occasion">Occasion</label>
-        <select name="occasion" id="occasion">
+        <select name="occasion" id="occasion" required>
             <option value="birthday">Birthday</option>
             <option value="engagement">Engagement</option>
             <option value="anniversary">Anniversary</option>
         </select>
-    </div>
-  )
-}
-
-export function Number(props) {
-    const [number, setNumber] = React.useState(0);
-
-    const Minus = () =>{
-        if(number > 0){
-            return setNumber(number-1);
-        }else{
-            return;
-        }
-    }
-    const Plus = () =>{
-        if(number < 15){
-            return setNumber(number+1);
-        }else {
-            return;
-        };
-    }
-  return (
-    <div className='number-component'>
-        <h2>{props.name}</h2>
-        <button onClick={Minus}>-</button>
-            {number}
-        <button onClick={Plus}>+</button>
     </div>
   )
 }
@@ -58,10 +30,10 @@ export function AddToBasket(props) {
   )
 }
 
-export function ReserveButton() {
+export function ReserveButton(props) {
   return (
     <div className="reserve-button">
-        <button type="submit">Reserve</button>
+        <button type="submit" onSubmit={props.onSubmit} disabled={props.disabled}>Reserve</button>
     </div>
   )
 }
@@ -76,12 +48,21 @@ export function MainButton(props) {
 
 export function FormInput(props) {
   return (
-    <div className={props.cssname}>
-        <label htmlFor={props.id}>{props.text} *</label>
-        <input type={props.type} id={props.id} />
+    <div className="input">
+        <label htmlFor={props.id}>{props.text}<b>*</b></label><br/>
+        <input
+          autoComplete={props.autoComplete}
+          required
+          type={props.type}
+          id={props.id}
+          min={props.min}
+          max={props.max}
+          value={props.value}
+          onChange={props.onChange}
+        />
     </div>
-  )
-}
+  )};
+
 
 export function SecondButton (props) {
   return (

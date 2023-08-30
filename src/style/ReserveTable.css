@@ -1,0 +1,72 @@
+article h2{
+    text-align: center;
+    font-size: 2.5vw;
+    margin: 1vw 0vw;
+    font-weight: bold;
+    color: #F4CE14;
+}
+
+.input-row-1,.input-row-2,.input-row-3{
+    display: flex;
+    justify-content: space-between;
+    margin: 0vw 28vw;
+}
+
+/*Number*/
+.number-of-guests-component{
+    text-align: center;
+    margin: 0;
+}
+
+.number-of-guests-button button:hover{
+    cursor: pointer;
+}
+
+.number-of-guests-component h2{
+    font-size: 2vw;
+    margin-top: 1vw;
+    margin-bottom: -1vw;
+    color: #F4CE14;
+}
+
+.number-of-guests-button button{
+    width: 2vw;
+    height: auto;
+    padding: 0.1vw 0vw;
+    margin: 0.3vw 0.7vw;
+    box-shadow: 1.5px 1.5px 1.5px 0px rgba(0, 0, 0, 0.105);
+}
+
+/*Occasion*/
+#occasion{
+    margin-top: 1vw;
+    text-align: center;
+    font-size: 1.9vw;
+    color: #F4CE14;
+    font-weight: 700;
+}
+
+.occasion-section{
+    display: flex;
+    justify-content: center;
+}
+
+.radio{
+    margin: 1vw 2vw;
+}
+
+.radio-input{
+    display: flex;
+    justify-content: center;
+}
+
+.radio-input input:hover{
+    cursor: pointer;
+}
+
+/*Reserve Button*/
+.reserve-button{
+    display: flex;
+    justify-content: center;
+    margin: 0.5vw 0vw;
+}

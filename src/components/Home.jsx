@@ -17,8 +17,7 @@ import about_photo_2 from '../icons_assets/about-photo-2.png'
 
 export default function Home() {
   return (
-    <>
-        <body>
+        <div className='body-page'>
             <main>
                 <div className='reservation-section'>
                     <article>
@@ -170,8 +169,7 @@ export default function Home() {
                     </article>
                 </div>
             </main>
-        </body>
-    </>
+        </div>
   )
 }
 

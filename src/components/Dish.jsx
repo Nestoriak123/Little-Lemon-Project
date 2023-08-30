@@ -148,7 +148,7 @@ export function Salmon() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -170,13 +170,14 @@ export function Salmon() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -187,13 +188,14 @@ export function Salmon() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -204,8 +206,9 @@ export function Salmon() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -213,7 +216,7 @@ export function Salmon() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -227,8 +230,9 @@ export function Salmon() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -243,7 +247,7 @@ export function Salmon() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -253,8 +257,9 @@ export function Salmon() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -269,7 +274,7 @@ export function Salmon() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -279,8 +284,9 @@ export function Salmon() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -295,7 +301,7 @@ export function Salmon() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -311,13 +317,14 @@ export function Salmon() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -329,8 +336,9 @@ export function Salmon() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -345,7 +353,7 @@ export function Salmon() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -362,13 +370,14 @@ export function Salmon() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -523,7 +532,7 @@ export function Gado() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -545,13 +554,14 @@ export function Gado() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -562,13 +572,14 @@ export function Gado() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -579,8 +590,9 @@ export function Gado() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -588,7 +600,7 @@ export function Gado() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -602,8 +614,9 @@ export function Gado() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -618,7 +631,7 @@ export function Gado() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -628,8 +641,9 @@ export function Gado() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -644,7 +658,7 @@ export function Gado() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -654,8 +668,9 @@ export function Gado() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -670,7 +685,7 @@ export function Gado() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -686,13 +701,14 @@ export function Gado() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -704,8 +720,9 @@ export function Gado() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -720,7 +737,7 @@ export function Gado() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -737,13 +754,14 @@ export function Gado() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -898,7 +916,7 @@ export function Aioli() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -920,13 +938,14 @@ export function Aioli() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -937,13 +956,14 @@ export function Aioli() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -954,8 +974,9 @@ export function Aioli() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -963,7 +984,7 @@ export function Aioli() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -977,8 +998,9 @@ export function Aioli() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -993,7 +1015,7 @@ export function Aioli() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1003,8 +1025,9 @@ export function Aioli() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -1019,7 +1042,7 @@ export function Aioli() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1029,8 +1052,9 @@ export function Aioli() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -1045,7 +1069,7 @@ export function Aioli() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1061,13 +1085,14 @@ export function Aioli() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -1079,8 +1104,9 @@ export function Aioli() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -1095,7 +1121,7 @@ export function Aioli() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -1112,13 +1138,14 @@ export function Aioli() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -1273,7 +1300,7 @@ export function SupremePizza() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -1295,13 +1322,14 @@ export function SupremePizza() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -1312,13 +1340,14 @@ export function SupremePizza() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -1329,8 +1358,9 @@ export function SupremePizza() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -1338,7 +1368,7 @@ export function SupremePizza() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -1352,8 +1382,9 @@ export function SupremePizza() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -1368,7 +1399,7 @@ export function SupremePizza() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1378,8 +1409,9 @@ export function SupremePizza() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -1394,7 +1426,7 @@ export function SupremePizza() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1404,8 +1436,9 @@ export function SupremePizza() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -1420,7 +1453,7 @@ export function SupremePizza() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1436,13 +1469,14 @@ export function SupremePizza() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -1454,8 +1488,9 @@ export function SupremePizza() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -1470,7 +1505,7 @@ export function SupremePizza() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -1487,13 +1522,14 @@ export function SupremePizza() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -1648,7 +1684,7 @@ export function Lasagna() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -1670,13 +1706,14 @@ export function Lasagna() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -1687,13 +1724,14 @@ export function Lasagna() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -1704,8 +1742,9 @@ export function Lasagna() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -1713,7 +1752,7 @@ export function Lasagna() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -1727,8 +1766,9 @@ export function Lasagna() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -1743,7 +1783,7 @@ export function Lasagna() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1753,8 +1793,9 @@ export function Lasagna() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -1769,7 +1810,7 @@ export function Lasagna() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1779,8 +1820,9 @@ export function Lasagna() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -1795,7 +1837,7 @@ export function Lasagna() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -1811,13 +1853,14 @@ export function Lasagna() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -1829,8 +1872,9 @@ export function Lasagna() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -1845,7 +1889,7 @@ export function Lasagna() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -1862,13 +1906,14 @@ export function Lasagna() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -2022,7 +2067,7 @@ export function LemonChicken() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -2044,13 +2089,14 @@ export function LemonChicken() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -2061,13 +2107,14 @@ export function LemonChicken() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -2078,8 +2125,9 @@ export function LemonChicken() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -2087,7 +2135,7 @@ export function LemonChicken() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -2101,8 +2149,9 @@ export function LemonChicken() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -2117,7 +2166,7 @@ export function LemonChicken() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2127,8 +2176,9 @@ export function LemonChicken() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -2143,7 +2193,7 @@ export function LemonChicken() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2153,8 +2203,9 @@ export function LemonChicken() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -2169,7 +2220,7 @@ export function LemonChicken() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2185,13 +2236,14 @@ export function LemonChicken() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -2203,8 +2255,9 @@ export function LemonChicken() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -2219,7 +2272,7 @@ export function LemonChicken() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -2236,13 +2289,14 @@ export function LemonChicken() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -2398,7 +2452,7 @@ export function Bruschetta() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -2420,13 +2474,14 @@ export function Bruschetta() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -2437,13 +2492,14 @@ export function Bruschetta() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -2454,8 +2510,9 @@ export function Bruschetta() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -2463,7 +2520,7 @@ export function Bruschetta() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -2477,8 +2534,9 @@ export function Bruschetta() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -2493,7 +2551,7 @@ export function Bruschetta() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2503,8 +2561,9 @@ export function Bruschetta() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -2519,7 +2578,7 @@ export function Bruschetta() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2529,8 +2588,9 @@ export function Bruschetta() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -2545,7 +2605,7 @@ export function Bruschetta() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2561,13 +2621,14 @@ export function Bruschetta() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -2579,8 +2640,9 @@ export function Bruschetta() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -2595,7 +2657,7 @@ export function Bruschetta() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -2612,13 +2674,14 @@ export function Bruschetta() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -2772,7 +2835,7 @@ export function PartyShrimp() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -2794,13 +2857,14 @@ export function PartyShrimp() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -2811,13 +2875,14 @@ export function PartyShrimp() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -2828,8 +2893,9 @@ export function PartyShrimp() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -2837,7 +2903,7 @@ export function PartyShrimp() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -2851,8 +2917,9 @@ export function PartyShrimp() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -2867,7 +2934,7 @@ export function PartyShrimp() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2877,8 +2944,9 @@ export function PartyShrimp() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -2893,7 +2961,7 @@ export function PartyShrimp() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2903,8 +2971,9 @@ export function PartyShrimp() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -2919,7 +2988,7 @@ export function PartyShrimp() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -2935,13 +3004,14 @@ export function PartyShrimp() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -2953,8 +3023,9 @@ export function PartyShrimp() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -2969,7 +3040,7 @@ export function PartyShrimp() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -2986,13 +3057,14 @@ export function PartyShrimp() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -3146,7 +3218,7 @@ export function CheeseFries() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -3168,13 +3240,14 @@ export function CheeseFries() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -3185,13 +3258,14 @@ export function CheeseFries() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -3202,8 +3276,9 @@ export function CheeseFries() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -3211,7 +3286,7 @@ export function CheeseFries() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -3225,8 +3300,9 @@ export function CheeseFries() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -3241,7 +3317,7 @@ export function CheeseFries() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -3251,8 +3327,9 @@ export function CheeseFries() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -3267,7 +3344,7 @@ export function CheeseFries() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -3277,8 +3354,9 @@ export function CheeseFries() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -3293,7 +3371,7 @@ export function CheeseFries() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -3309,13 +3387,14 @@ export function CheeseFries() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -3327,8 +3406,9 @@ export function CheeseFries() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -3343,7 +3423,7 @@ export function CheeseFries() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -3360,13 +3440,14 @@ export function CheeseFries() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -3520,7 +3601,7 @@ export function GlazedMeatballs() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -3542,13 +3623,14 @@ export function GlazedMeatballs() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -3559,13 +3641,14 @@ export function GlazedMeatballs() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -3576,8 +3659,9 @@ export function GlazedMeatballs() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -3585,7 +3669,7 @@ export function GlazedMeatballs() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -3599,8 +3683,9 @@ export function GlazedMeatballs() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -3615,7 +3700,7 @@ export function GlazedMeatballs() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -3625,8 +3710,9 @@ export function GlazedMeatballs() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -3641,7 +3727,7 @@ export function GlazedMeatballs() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -3651,8 +3737,9 @@ export function GlazedMeatballs() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -3667,7 +3754,7 @@ export function GlazedMeatballs() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -3683,13 +3770,14 @@ export function GlazedMeatballs() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -3701,8 +3789,9 @@ export function GlazedMeatballs() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -3717,7 +3806,7 @@ export function GlazedMeatballs() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -3734,13 +3823,14 @@ export function GlazedMeatballs() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -3894,7 +3984,7 @@ export function PepperoniPizza() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -3916,13 +4006,14 @@ export function PepperoniPizza() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -3933,13 +4024,14 @@ export function PepperoniPizza() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -3950,8 +4042,9 @@ export function PepperoniPizza() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -3959,7 +4052,7 @@ export function PepperoniPizza() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -3973,8 +4066,9 @@ export function PepperoniPizza() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -3989,7 +4083,7 @@ export function PepperoniPizza() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -3999,8 +4093,9 @@ export function PepperoniPizza() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -4015,7 +4110,7 @@ export function PepperoniPizza() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -4025,8 +4120,9 @@ export function PepperoniPizza() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -4041,7 +4137,7 @@ export function PepperoniPizza() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -4057,13 +4153,14 @@ export function PepperoniPizza() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -4075,8 +4172,9 @@ export function PepperoniPizza() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -4091,7 +4189,7 @@ export function PepperoniPizza() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -4108,13 +4206,14 @@ export function PepperoniPizza() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -4268,7 +4367,7 @@ export function SoftBeerPretzels() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -4290,13 +4389,14 @@ export function SoftBeerPretzels() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -4307,13 +4407,14 @@ export function SoftBeerPretzels() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -4324,8 +4425,9 @@ export function SoftBeerPretzels() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -4333,7 +4435,7 @@ export function SoftBeerPretzels() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -4347,8 +4449,9 @@ export function SoftBeerPretzels() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -4363,7 +4466,7 @@ export function SoftBeerPretzels() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -4373,8 +4476,9 @@ export function SoftBeerPretzels() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -4389,7 +4493,7 @@ export function SoftBeerPretzels() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -4399,8 +4503,9 @@ export function SoftBeerPretzels() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -4415,7 +4520,7 @@ export function SoftBeerPretzels() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -4431,13 +4536,14 @@ export function SoftBeerPretzels() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -4449,8 +4555,9 @@ export function SoftBeerPretzels() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -4465,7 +4572,7 @@ export function SoftBeerPretzels() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -4482,13 +4589,14 @@ export function SoftBeerPretzels() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -4644,7 +4752,7 @@ export function LemonDesert() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -4666,13 +4774,14 @@ export function LemonDesert() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -4683,13 +4792,14 @@ export function LemonDesert() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -4700,8 +4810,9 @@ export function LemonDesert() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -4709,7 +4820,7 @@ export function LemonDesert() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -4723,8 +4834,9 @@ export function LemonDesert() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -4739,7 +4851,7 @@ export function LemonDesert() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -4749,8 +4861,9 @@ export function LemonDesert() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -4765,7 +4878,7 @@ export function LemonDesert() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -4775,8 +4888,9 @@ export function LemonDesert() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -4791,7 +4905,7 @@ export function LemonDesert() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -4807,13 +4921,14 @@ export function LemonDesert() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -4825,8 +4940,9 @@ export function LemonDesert() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -4841,7 +4957,7 @@ export function LemonDesert() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -4858,13 +4974,14 @@ export function LemonDesert() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -5018,7 +5135,7 @@ export function CaramelAppleCake() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -5040,13 +5157,14 @@ export function CaramelAppleCake() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -5057,13 +5175,14 @@ export function CaramelAppleCake() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -5074,8 +5193,9 @@ export function CaramelAppleCake() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -5083,7 +5203,7 @@ export function CaramelAppleCake() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -5097,8 +5217,9 @@ export function CaramelAppleCake() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -5113,7 +5234,7 @@ export function CaramelAppleCake() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5123,8 +5244,9 @@ export function CaramelAppleCake() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -5139,7 +5261,7 @@ export function CaramelAppleCake() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5149,8 +5271,9 @@ export function CaramelAppleCake() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -5165,7 +5288,7 @@ export function CaramelAppleCake() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5181,13 +5304,14 @@ export function CaramelAppleCake() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -5199,8 +5323,9 @@ export function CaramelAppleCake() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -5215,7 +5340,7 @@ export function CaramelAppleCake() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -5232,13 +5357,14 @@ export function CaramelAppleCake() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -5392,7 +5518,7 @@ export function FudgePie() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -5414,13 +5540,14 @@ export function FudgePie() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -5431,13 +5558,14 @@ export function FudgePie() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -5448,8 +5576,9 @@ export function FudgePie() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -5457,7 +5586,7 @@ export function FudgePie() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -5471,8 +5600,9 @@ export function FudgePie() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -5487,7 +5617,7 @@ export function FudgePie() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5497,8 +5627,9 @@ export function FudgePie() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -5513,7 +5644,7 @@ export function FudgePie() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5523,8 +5654,9 @@ export function FudgePie() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -5539,7 +5671,7 @@ export function FudgePie() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5555,13 +5687,14 @@ export function FudgePie() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -5573,8 +5706,9 @@ export function FudgePie() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -5589,7 +5723,7 @@ export function FudgePie() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -5606,13 +5740,14 @@ export function FudgePie() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -5766,7 +5901,7 @@ export function ChocolateCobbler() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -5788,13 +5923,14 @@ export function ChocolateCobbler() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -5805,13 +5941,14 @@ export function ChocolateCobbler() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -5822,8 +5959,9 @@ export function ChocolateCobbler() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -5831,7 +5969,7 @@ export function ChocolateCobbler() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -5845,8 +5983,9 @@ export function ChocolateCobbler() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -5861,7 +6000,7 @@ export function ChocolateCobbler() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5871,8 +6010,9 @@ export function ChocolateCobbler() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -5887,7 +6027,7 @@ export function ChocolateCobbler() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5897,8 +6037,9 @@ export function ChocolateCobbler() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -5913,7 +6054,7 @@ export function ChocolateCobbler() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -5929,13 +6070,14 @@ export function ChocolateCobbler() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -5947,8 +6089,9 @@ export function ChocolateCobbler() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -5963,7 +6106,7 @@ export function ChocolateCobbler() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -5980,13 +6123,14 @@ export function ChocolateCobbler() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -6140,7 +6284,7 @@ export function MississippiCake() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -6162,13 +6306,14 @@ export function MississippiCake() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -6179,13 +6324,14 @@ export function MississippiCake() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -6196,8 +6342,9 @@ export function MississippiCake() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -6205,7 +6352,7 @@ export function MississippiCake() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -6219,8 +6366,9 @@ export function MississippiCake() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -6235,7 +6383,7 @@ export function MississippiCake() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -6245,8 +6393,9 @@ export function MississippiCake() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -6261,7 +6410,7 @@ export function MississippiCake() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -6271,8 +6420,9 @@ export function MississippiCake() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -6287,7 +6437,7 @@ export function MississippiCake() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -6303,13 +6453,14 @@ export function MississippiCake() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -6321,8 +6472,9 @@ export function MississippiCake() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -6337,7 +6489,7 @@ export function MississippiCake() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -6354,13 +6506,14 @@ export function MississippiCake() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -6514,7 +6667,7 @@ export function ChessPie() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -6536,13 +6689,14 @@ export function ChessPie() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -6553,13 +6707,14 @@ export function ChessPie() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -6570,8 +6725,9 @@ export function ChessPie() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -6579,7 +6735,7 @@ export function ChessPie() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -6593,8 +6749,9 @@ export function ChessPie() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -6609,7 +6766,7 @@ export function ChessPie() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -6619,8 +6776,9 @@ export function ChessPie() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -6635,7 +6793,7 @@ export function ChessPie() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -6645,8 +6803,9 @@ export function ChessPie() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -6661,7 +6820,7 @@ export function ChessPie() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -6677,13 +6836,14 @@ export function ChessPie() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -6695,8 +6855,9 @@ export function ChessPie() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -6711,7 +6872,7 @@ export function ChessPie() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -6728,13 +6889,14 @@ export function ChessPie() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -6889,7 +7051,7 @@ export function GreekSalad() {
 
 
   return (
-    <div>
+    <div className='body-page'>
       <main>
           <article>
             <section className='dish-box'>
@@ -6911,13 +7073,14 @@ export function GreekSalad() {
                 <div className='custom'>
                   <h5>Drinks</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="drinks-checkbox"
                       type="checkbox"
                       checked={isChecked1}
                       onChange={handleCheckboxChange1}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>
@@ -6928,13 +7091,14 @@ export function GreekSalad() {
                       <div className='alco-type-box'>
                         <div className='alco-type'>
                         <h5>Non-Alcohol</h5>
-                        <label class="custom-checkbox">
+                        <label className="custom-checkbox">
                           <input
+                            id="non-alco-checkbox"
                             type="checkbox"
                             checked={isChecked4}
                             onChange={handleCheckboxChange4}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         </label>
                       </div>
                       <hr/>
@@ -6945,8 +7109,9 @@ export function GreekSalad() {
                           <div className='customs-checked'>
                             <h6>{drink.drink_name}</h6>
                             <div className='customs-checked-price'>
-                            <label class="custom-checkbox">
+                            <label className="custom-checkbox">
                               <input
+                                id={drink.drink_name}
                                 type="checkbox"
                                 checked={isCheckedArray2[index] || false}
                                 onChange={(event) => {
@@ -6954,7 +7119,7 @@ export function GreekSalad() {
                                   newCheckedArray[index] = event.target.checked;
                                   setIsCheckedArray2(newCheckedArray);}}
                                 />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -6968,8 +7133,9 @@ export function GreekSalad() {
                                 <h6><b>S</b>: {drink.drink_size_S}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_S}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_S}
                                       type="checkbox"
                                       checked={isCheckedArray3[index] || false}
                                       onChange={(event) => {
@@ -6984,7 +7150,7 @@ export function GreekSalad() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -6994,8 +7160,9 @@ export function GreekSalad() {
                                 <h6><b>M</b>: {drink.drink_size_M}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_M}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_M}
                                       type="checkbox"
                                       checked={isCheckedArray4[index] || false}
                                       onChange={(event) => {
@@ -7010,7 +7177,7 @@ export function GreekSalad() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -7020,8 +7187,9 @@ export function GreekSalad() {
                                 <h6><b>L</b>: {drink.drink_size_L}ml</h6>
                                 <div className='drink-size-price'>
                                   <p>${drink.drink_price_L}</p>
-                                  <label class="custom-checkbox">
+                                  <label className="custom-checkbox">
                                     <input
+                                      id={drink.drink_size_L}
                                       type="checkbox"
                                       checked={isCheckedArray5[index] || false}
                                       onChange={(event) => {
@@ -7036,7 +7204,7 @@ export function GreekSalad() {
                                         }
                                       }}
                                       />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                               </div>
@@ -7052,13 +7220,14 @@ export function GreekSalad() {
                     <div className='alco-type-box'>
                       <div className='alco-type'>
                       <h5>Alcohol</h5>
-                      <label class="custom-checkbox">
+                      <label className="custom-checkbox">
                         <input
+                          id="alco-ckecbox"
                           type="checkbox"
                           checked={isChecked5}
                           onChange={handleCheckboxChange5}
                           />
-                        <span class="checkmark"></span>
+                        <span className="checkmark"></span>
                       </label>
                       </div>
                       <hr/>
@@ -7070,8 +7239,9 @@ export function GreekSalad() {
                             <h6>{drink.drink_name}</h6>
                             <div className='drink-size-price'>
                               <p>${drink.drink_price}</p>
-                              <label class="custom-checkbox">
+                              <label className="custom-checkbox">
                                 <input
+                                  id={drink.drink_price}
                                   type="checkbox"
                                   checked={isCheckedArray[index] || false}
                                   onChange={(event) => {
@@ -7086,7 +7256,7 @@ export function GreekSalad() {
                                     }
                                   }}
                                   />
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                               </label>
                             </div>
                           </div>
@@ -7103,13 +7273,14 @@ export function GreekSalad() {
                 <div className='custom'>
                   <h5>Special Requests</h5>
                   <div className='custom-price'>
-                  <label class="custom-checkbox">
+                  <label className="custom-checkbox">
                     <input
+                      id="special-requests-checkbox"
                       type="checkbox"
                       checked={isChecked3}
                       onChange={handleCheckboxChange3}
                       />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                   </div>
                 </div>

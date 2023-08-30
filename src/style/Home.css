@@ -66,7 +66,7 @@
     margin: 1.5vw 3vw;
     width: 20vw;
     border-radius: 20px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .home-dish img{
@@ -135,7 +135,7 @@
     border-radius: 5px;
     margin: 1vw;
     padding: 0.5vw 1.5vw 1.5vw;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .testimalsbox h4{
@@ -195,7 +195,7 @@
     width: 15vw;
     height: 40vh;
     border-radius: 10px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .about-photo-1{

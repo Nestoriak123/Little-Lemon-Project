@@ -1,3 +1,4 @@
+/*SecondButton*/
 .second-button button{
     height: 9vh;
     width: 15vw;
@@ -15,6 +16,7 @@
     cursor: pointer;
 }
 
+/*MainButton*/
 .main-button button{
     height: 9vh;
     width: 15vw;
@@ -32,6 +34,7 @@
     cursor: pointer;
 }
 
+/*DishCategory*/
 .dish-category-button button{
     height: 7vh;
     width: 13vw;
@@ -49,6 +52,7 @@
     cursor: pointer;
 }
 
+/*AddToBasket*/
 .add-to-basket button{
     height: 9vh;
     width: 19vw;
@@ -66,8 +70,8 @@
     cursor: pointer;
 }
 
-
-.ocasion-button{
+/*OccasionButton*/
+.occasion-button{
     position: relative;
     font-family: Arial;
 }
@@ -76,39 +80,14 @@ select::-ms-expand {
     display: none; /* Hide the default arrow in IE/Edge */
 }
 
-label:after {
-    content: '<>';
-    font: 11px "Consolas", monospace;
-    color: #666;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    transform: rotate(90deg);
-    right: 8px;
-    top: 2px;
-    padding: 0 0 2px;
-    border-bottom: 1px solid #ddd;
-    position: absolute;
-    pointer-events: none;
-  }
-  label:before {
-    content: '';
-    right: 6px;
-    top: 0px;
-    width: 20px;
-    height: 20px;
-    background: #eee;
-    position: absolute;
-    pointer-events: none;
-    display: block;
-  }
 
 select{
     width: 8vw;
-    
+    height: 7vh;
     outline: none;
     background-color: #F4CE14;
     color: #495E57;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
     margin-bottom: 0.5vw;
     -webkit-appearance: none;
@@ -127,3 +106,41 @@ option:hover{
     background-color: #EDEFEE;
 }
 
+/*FormInput*/
+.input b{
+    color: #F4CE14;
+    font-weight: bolder;
+}
+
+.input input{
+    width: 20vw;
+    height: 4vh;
+    border-radius: 7px;
+    font-size: 1.3vw;
+    font-weight: normal;
+    box-shadow: 1.5px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid gray;
+}
+
+.input label{
+    color: #495E57;
+    font-size: 1.35vw;
+}
+
+/*ReserveButton*/
+.reserve-button button{
+    padding: 0.5vw 2vw;
+    font-size: 1.3vw;
+    border-radius: 5px;
+    border: none;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.351);
+}
+
+.reserve-button button:hover{
+    background-color: #F4CE14;
+    padding: 0.5vw 2vw;
+    font-size: 1.3vw;
+    border-radius: 5px;
+    border: none;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.351);
+}
